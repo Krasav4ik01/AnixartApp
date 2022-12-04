@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A297EA52939EA67007AA48A /* SearchCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A297EA42939EA67007AA48A /* SearchCommentTableViewCell.swift */; };
+		0A45F34C291EA81E0050C924 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A45F34B291EA81E0050C924 /* SearchTableViewCell.swift */; };
+		0A9139A7291E71600028E51A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9139A6291E71600028E51A /* MainTabBarController.swift */; };
+		0A9139A9291E754A0028E51A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9139A8291E754A0028E51A /* HomeViewController.swift */; };
+		0A9139AB291E75590028E51A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9139AA291E75590028E51A /* SearchViewController.swift */; };
+		0A9139AD291E758F0028E51A /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9139AC291E758F0028E51A /* BookmarksViewController.swift */; };
+		0A9139AF291E75A20028E51A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9139AE291E75A20028E51A /* ProfileViewController.swift */; };
+		0A9139B1291E7D140028E51A /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9139B0291E7D140028E51A /* HomeTableViewCell.swift */; };
+		0A9139B3291E7D5A0028E51A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9139B2291E7D5A0028E51A /* Constants.swift */; };
+		0A9599D42927B6C200179E9D /* HomeNavigationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9599D32927B6C200179E9D /* HomeNavigationTableViewCell.swift */; };
+		0ABB1402291BE903006E07D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB1401291BE903006E07D7 /* AppDelegate.swift */; };
+		0ABB1404291BE903006E07D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB1403291BE903006E07D7 /* SceneDelegate.swift */; };
+		0ABB1406291BE903006E07D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB1405291BE903006E07D7 /* ViewController.swift */; };
+		0ABB140B291BE903006E07D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ABB140A291BE903006E07D7 /* Assets.xcassets */; };
+		0ABB140E291BE903006E07D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ABB140C291BE903006E07D7 /* LaunchScreen.storyboard */; };
+		0AF4DC7929290401003AF3B1 /* AnimeLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4DC7829290401003AF3B1 /* AnimeLists.swift */; };
+		E092B4ED0CA9812617AE09D5 /* Pods_Anixart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8572B379645C68EF59D1CFFD /* Pods_Anixart.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A297EA42939EA67007AA48A /* SearchCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCommentTableViewCell.swift; sourceTree = "<group>"; };
+		0A45F34B291EA81E0050C924 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		0A9139A6291E71600028E51A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		0A9139A8291E754A0028E51A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0A9139AA291E75590028E51A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		0A9139AC291E758F0028E51A /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
+		0A9139AE291E75A20028E51A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0A9139B0291E7D140028E51A /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		0A9139B2291E7D5A0028E51A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0A9599D32927B6C200179E9D /* HomeNavigationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationTableViewCell.swift; sourceTree = "<group>"; };
+		0ABB13FE291BE903006E07D7 /* Anixart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anixart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ABB1401291BE903006E07D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0ABB1403291BE903006E07D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0ABB1405291BE903006E07D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0ABB140A291BE903006E07D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0ABB140D291BE903006E07D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0ABB140F291BE903006E07D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AF4DC7829290401003AF3B1 /* AnimeLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeLists.swift; sourceTree = "<group>"; };
+		33C3498B4405042671FEB83A /* Pods-Anixart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anixart.debug.xcconfig"; path = "Target Support Files/Pods-Anixart/Pods-Anixart.debug.xcconfig"; sourceTree = "<group>"; };
+		8572B379645C68EF59D1CFFD /* Pods_Anixart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Anixart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E79A5736985D964BCA101C9D /* Pods-Anixart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anixart.release.xcconfig"; path = "Target Support Files/Pods-Anixart/Pods-Anixart.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0ABB13FB291BE903006E07D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E092B4ED0CA9812617AE09D5 /* Pods_Anixart.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		074B667E733AEA2D7FFBC85F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8572B379645C68EF59D1CFFD /* Pods_Anixart.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0A7E6223291D53C00050845E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A9139B0291E7D140028E51A /* HomeTableViewCell.swift */,
+				0A9599D32927B6C200179E9D /* HomeNavigationTableViewCell.swift */,
+				0A45F34B291EA81E0050C924 /* SearchTableViewCell.swift */,
+				0A297EA42939EA67007AA48A /* SearchCommentTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A7E6224291D53CA0050845E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0ABB1405291BE903006E07D7 /* ViewController.swift */,
+				0A9139A6291E71600028E51A /* MainTabBarController.swift */,
+				0A9139A8291E754A0028E51A /* HomeViewController.swift */,
+				0A9139AA291E75590028E51A /* SearchViewController.swift */,
+				0A9139AC291E758F0028E51A /* BookmarksViewController.swift */,
+				0A9139AE291E75A20028E51A /* ProfileViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0A7E6225291D53D40050845E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0AF4DC7829290401003AF3B1 /* AnimeLists.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0ABB13F5291BE903006E07D7 = {
+			isa = PBXGroup;
+			children = (
+				0ABB1400291BE903006E07D7 /* Anixart */,
+				0ABB13FF291BE903006E07D7 /* Products */,
+				33BA4A9538B0CC09083C7048 /* Pods */,
+				074B667E733AEA2D7FFBC85F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0ABB13FF291BE903006E07D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0ABB13FE291BE903006E07D7 /* Anixart.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0ABB1400291BE903006E07D7 /* Anixart */ = {
+			isa = PBXGroup;
+			children = (
+				0A7E6225291D53D40050845E /* Models */,
+				0A7E6224291D53CA0050845E /* Controllers */,
+				0A7E6223291D53C00050845E /* Views */,
+				0ABB1401291BE903006E07D7 /* AppDelegate.swift */,
+				0ABB1403291BE903006E07D7 /* SceneDelegate.swift */,
+				0A9139B2291E7D5A0028E51A /* Constants.swift */,
+				0ABB140A291BE903006E07D7 /* Assets.xcassets */,
+				0ABB140C291BE903006E07D7 /* LaunchScreen.storyboard */,
+				0ABB140F291BE903006E07D7 /* Info.plist */,
+			);
+			path = Anixart;
+			sourceTree = "<group>";
+		};
+		33BA4A9538B0CC09083C7048 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33C3498B4405042671FEB83A /* Pods-Anixart.debug.xcconfig */,
+				E79A5736985D964BCA101C9D /* Pods-Anixart.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0ABB13FD291BE903006E07D7 /* Anixart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ABB1412291BE903006E07D7 /* Build configuration list for PBXNativeTarget "Anixart" */;
+			buildPhases = (
+				D52F31330CB81A56E1E37EF9 /* [CP] Check Pods Manifest.lock */,
+				0ABB13FA291BE903006E07D7 /* Sources */,
+				0ABB13FB291BE903006E07D7 /* Frameworks */,
+				0ABB13FC291BE903006E07D7 /* Resources */,
+				B8A068E534B74D0376CE4674 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Anixart;
+			productName = Anixart;
+			productReference = 0ABB13FE291BE903006E07D7 /* Anixart.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0ABB13F6291BE903006E07D7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					0ABB13FD291BE903006E07D7 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 0ABB13F9291BE903006E07D7 /* Build configuration list for PBXProject "Anixart" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0ABB13F5291BE903006E07D7;
+			productRefGroup = 0ABB13FF291BE903006E07D7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0ABB13FD291BE903006E07D7 /* Anixart */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0ABB13FC291BE903006E07D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ABB140E291BE903006E07D7 /* LaunchScreen.storyboard in Resources */,
+				0ABB140B291BE903006E07D7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B8A068E534B74D0376CE4674 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Anixart/Pods-Anixart-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Anixart/Pods-Anixart-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Anixart/Pods-Anixart-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D52F31330CB81A56E1E37EF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Anixart-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0ABB13FA291BE903006E07D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A9139AD291E758F0028E51A /* BookmarksViewController.swift in Sources */,
+				0A9139AB291E75590028E51A /* SearchViewController.swift in Sources */,
+				0A9139A9291E754A0028E51A /* HomeViewController.swift in Sources */,
+				0ABB1406291BE903006E07D7 /* ViewController.swift in Sources */,
+				0A9599D42927B6C200179E9D /* HomeNavigationTableViewCell.swift in Sources */,
+				0A45F34C291EA81E0050C924 /* SearchTableViewCell.swift in Sources */,
+				0ABB1402291BE903006E07D7 /* AppDelegate.swift in Sources */,
+				0AF4DC7929290401003AF3B1 /* AnimeLists.swift in Sources */,
+				0A9139B3291E7D5A0028E51A /* Constants.swift in Sources */,
+				0A9139A7291E71600028E51A /* MainTabBarController.swift in Sources */,
+				0A9139B1291E7D140028E51A /* HomeTableViewCell.swift in Sources */,
+				0A9139AF291E75A20028E51A /* ProfileViewController.swift in Sources */,
+				0A297EA52939EA67007AA48A /* SearchCommentTableViewCell.swift in Sources */,
+				0ABB1404291BE903006E07D7 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0ABB140C291BE903006E07D7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0ABB140D291BE903006E07D7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0ABB1410291BE903006E07D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0ABB1411291BE903006E07D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0ABB1413291BE903006E07D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33C3498B4405042671FEB83A /* Pods-Anixart.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Anixart/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rus.Lesson1.Anixart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0ABB1414291BE903006E07D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E79A5736985D964BCA101C9D /* Pods-Anixart.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Anixart/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rus.Lesson1.Anixart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0ABB13F9291BE903006E07D7 /* Build configuration list for PBXProject "Anixart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ABB1410291BE903006E07D7 /* Debug */,
+				0ABB1411291BE903006E07D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0ABB1412291BE903006E07D7 /* Build configuration list for PBXNativeTarget "Anixart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ABB1413291BE903006E07D7 /* Debug */,
+				0ABB1414291BE903006E07D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0ABB13F6291BE903006E07D7 /* Project object */;
+}
