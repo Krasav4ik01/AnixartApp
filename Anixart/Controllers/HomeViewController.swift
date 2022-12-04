@@ -17,7 +17,6 @@ class HomeViewController: UIViewController {
             layout.itemSize = CGSize (width: 125, height: 200)
             let collectionView = UICollectionView(frame: .zero, collectionViewLayout : layout)
             collectionView.backgroundColor = .black
-        
             collectionView.register (HomeNavigationTableViewCell.self, forCellWithReuseIdentifier: Constants.Identifiers.HomeNavigationTableViewCell)
             collectionView.showsHorizontalScrollIndicator = false
             return collectionView
