@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0DAA8A293DB58E00A229E3 /* ExtensionsForNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0DAA89293DB58E00A229E3 /* ExtensionsForNavigationBar.swift */; };
+		0A0DAA8E293DD3C500A229E3 /* AnimeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0DAA8D293DD3C500A229E3 /* AnimeData.swift */; };
+		0A0DAA90293DD41900A229E3 /* AnimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0DAA8F293DD41900A229E3 /* AnimeModel.swift */; };
+		0A0DAA92293DD4CA00A229E3 /* AnimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0DAA91293DD4CA00A229E3 /* AnimeManager.swift */; };
 		0A297EA52939EA67007AA48A /* SearchCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A297EA42939EA67007AA48A /* SearchCommentTableViewCell.swift */; };
 		0A45F34C291EA81E0050C924 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A45F34B291EA81E0050C924 /* SearchTableViewCell.swift */; };
 		0A9139A7291E71600028E51A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9139A6291E71600028E51A /* MainTabBarController.swift */; };
@@ -27,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A0DAA89293DB58E00A229E3 /* ExtensionsForNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsForNavigationBar.swift; sourceTree = "<group>"; };
+		0A0DAA8D293DD3C500A229E3 /* AnimeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeData.swift; sourceTree = "<group>"; };
+		0A0DAA8F293DD41900A229E3 /* AnimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeModel.swift; sourceTree = "<group>"; };
+		0A0DAA91293DD4CA00A229E3 /* AnimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeManager.swift; sourceTree = "<group>"; };
 		0A297EA42939EA67007AA48A /* SearchCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCommentTableViewCell.swift; sourceTree = "<group>"; };
 		0A45F34B291EA81E0050C924 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		0A9139A6291E71600028E51A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -70,6 +78,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0A0DAA88293DB56800A229E3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0A0DAA89293DB58E00A229E3 /* ExtensionsForNavigationBar.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		0A7E6223291D53C00050845E /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +114,9 @@
 			isa = PBXGroup;
 			children = (
 				0AF4DC7829290401003AF3B1 /* AnimeLists.swift */,
+				0A0DAA8D293DD3C500A229E3 /* AnimeData.swift */,
+				0A0DAA8F293DD41900A229E3 /* AnimeModel.swift */,
+				0A0DAA91293DD4CA00A229E3 /* AnimeManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -123,6 +142,7 @@
 		0ABB1400291BE903006E07D7 /* Anixart */ = {
 			isa = PBXGroup;
 			children = (
+				0A0DAA88293DB56800A229E3 /* Extensions */,
 				0A7E6225291D53D40050845E /* Models */,
 				0A7E6224291D53CA0050845E /* Controllers */,
 				0A7E6223291D53C00050845E /* Views */,
@@ -260,7 +280,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A9139AD291E758F0028E51A /* BookmarksViewController.swift in Sources */,
+				0A0DAA8A293DB58E00A229E3 /* ExtensionsForNavigationBar.swift in Sources */,
 				0A9139AB291E75590028E51A /* SearchViewController.swift in Sources */,
+				0A0DAA8E293DD3C500A229E3 /* AnimeData.swift in Sources */,
 				0A9139A9291E754A0028E51A /* HomeViewController.swift in Sources */,
 				0ABB1406291BE903006E07D7 /* ViewController.swift in Sources */,
 				0A9599D42927B6C200179E9D /* HomeNavigationTableViewCell.swift in Sources */,
@@ -271,7 +293,9 @@
 				0A9139A7291E71600028E51A /* MainTabBarController.swift in Sources */,
 				0A9139B1291E7D140028E51A /* HomeTableViewCell.swift in Sources */,
 				0A9139AF291E75A20028E51A /* ProfileViewController.swift in Sources */,
+				0A0DAA92293DD4CA00A229E3 /* AnimeManager.swift in Sources */,
 				0A297EA52939EA67007AA48A /* SearchCommentTableViewCell.swift in Sources */,
+				0A0DAA90293DD41900A229E3 /* AnimeModel.swift in Sources */,
 				0ABB1404291BE903006E07D7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

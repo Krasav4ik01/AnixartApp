@@ -51,18 +51,22 @@ class SearchCommentTableViewCell: UITableViewCell {
         return label
     }()
     
-    lazy var cellSettings: UIImageView = {
-       let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "poweroutlet.type.l.fill")
-        imageView.contentMode = .scaleAspectFit
-        imageView.tintColor = .label
+    lazy var cellSettingsButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(systemName: "poweroutlet.type.l.fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
         
-//        imageView.autoSetDimensions(to: CGSize(width: 128.0, height: 128.0))
-//        imageView.layer.cornerRadius = 20
+        button.tintColor = .label
+        button.imageView?.contentMode = .scaleAspectFit
+        button.contentVerticalAlignment = .fill
+        button.contentHorizontalAlignment = .fill
+        button.addTarget(self, action: #selector(cellSettingsButtonTupped(sender: )), for: .touchUpInside)
+        return button
         
-        imageView.clipsToBounds = true
-        return imageView
     }()
+    @objc private func cellSettingsButtonTupped(sender: UIButton){
+        print("cellSettingsButtonTupped in SearchTableView")
+        HomeTableViewCell().animateView(sender)
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -85,7 +89,7 @@ private extension SearchCommentTableViewCell{
         contentView.addSubview(topAnimeEpisodeCounts)
         contentView.addSubview(topAnimeRatingCounts)
         contentView.addSubview(topAnimeCommentCounts)
-        contentView.addSubview(cellSettings)
+        contentView.addSubview(cellSettingsButton)
     }
     func setupConstraints(){
         
@@ -119,7 +123,7 @@ private extension SearchCommentTableViewCell{
             make.leading.equalTo(topAnimeImages.snp.trailing).offset(20)
             
         }
-        cellSettings.snp.makeConstraints { make in
+        cellSettingsButton.snp.makeConstraints { make in
 //            make.leading.equalTo(topAnimeEpisodeCounts.snp.trailing).offset(50)
             make.trailing.equalToSuperview().inset(5)
             make.top.equalToSuperview()

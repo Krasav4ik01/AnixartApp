@@ -18,4 +18,8 @@ struct Constants{
         
         static let SearchCommentTableViewCell = "SearchCommentTableViewCell"
     }
+    
+    struct API {
+        static let OW_KEY = "https://kitsu.io/api/edge/anime"
+    }
 }

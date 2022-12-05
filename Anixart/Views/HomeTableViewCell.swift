@@ -9,6 +9,14 @@ import UIKit
 import SnapKit
 class HomeTableViewCell: UITableViewCell {
     
+    lazy var invisibleButton: UIButton = {
+       let button = UIButton()
+        button.addTarget(self, action: #selector(targetPage), for: .touchUpInside)
+        return button
+    }()
+    @objc func targetPage(){
+        print("Next page tupped")
+    }
     lazy var animeImage: UIImageView = {
        let imageView = UIImageView()
         imageView.image = UIImage(named: "chainsawman.jpg")
@@ -49,17 +57,45 @@ class HomeTableViewCell: UITableViewCell {
         return label
     }()
     
-    lazy var cellSettings: UIImageView = {
-       let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "poweroutlet.type.l.fill")
-        imageView.contentMode = .scaleAspectFit
-        imageView.tintColor = .label
-//        imageView.autoSetDimensions(to: CGSize(width: 128.0, height: 128.0))
-//        imageView.layer.cornerRadius = 20
+//    lazy var cellSettings: UIImageView = {
+//       let imageView = UIImageView()
+//        imageView.image = UIImage(systemName: "poweroutlet.type.l.fill")
+//        imageView.contentMode = .scaleAspectFit
+//        imageView.tintColor = .label
+////        imageView.autoSetDimensions(to: CGSize(width: 128.0, height: 128.0))
+////        imageView.layer.cornerRadius = 20
+//
+//        imageView.clipsToBounds = true
+//        return imageView
+//    }()
+    
+    lazy var cellSettingsButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(systemName: "poweroutlet.type.l.fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
         
-        imageView.clipsToBounds = true
-        return imageView
+        button.tintColor = .label
+        button.imageView?.contentMode = .scaleAspectFit
+        button.contentVerticalAlignment = .fill
+        button.contentHorizontalAlignment = .fill
+        button.addTarget(self, action: #selector(cellSettingsButtonTupped(sender:)), for: .touchUpInside)
+        return button
+        
     }()
+    @objc private func cellSettingsButtonTupped(sender: UIButton){
+        print("cellSettingsButtonTupped")
+        self.animateView(sender)
+    }
+    
+    func animateView(_ viewToAnimate: UIView){
+        UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+            viewToAnimate.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
+        } ) {(_) in
+            UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0.2, options: .curveEaseIn, animations: {
+                viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }, completion: nil)
+            
+        }
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -79,16 +115,41 @@ class HomeTableViewCell: UITableViewCell {
 
 }
 
+
+extension HomeTableViewCell: AnimeManagerDelegate{
+    func didUpdateAnime(_ animeManager: AnimeManager, with model: AnimeModel) {
+        DispatchQueue.main.async {
+            self.animeTitle.text = model.title
+            self.animeDescription.text = model.desc
+            self.animeEpisodeCounts.text = "\(Int(model.episodes))"
+            self.animeRatingCounts.text = "\(Int(model.rate))"
+        }
+        
+    }
+    
+    func didFailWithError(with: Error) {
+        print("Errrrroooor!")
+    }
+    
+    
+}
+
+
+
 private extension HomeTableViewCell{
     func setupViews(){
+        contentView.addSubview(invisibleButton)
         contentView.addSubview(animeImage)
         contentView.addSubview(animeTitle)
         contentView.addSubview(animeEpisodeCounts)
         contentView.addSubview(animeRatingCounts)
         contentView.addSubview(animeDescription)
-        contentView.addSubview(cellSettings)
+        contentView.addSubview(cellSettingsButton)
     }
     func setupConstraints(){
+        invisibleButton.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
         animeImage.snp.makeConstraints { make in
             make.top.leading.bottom.equalToSuperview().inset(5)
             make.width.equalToSuperview().multipliedBy(0.3)
@@ -119,7 +180,7 @@ private extension HomeTableViewCell{
             make.leading.equalTo(animeImage.snp.trailing).offset(20)
             
         }
-        cellSettings.snp.makeConstraints { make in
+        cellSettingsButton.snp.makeConstraints { make in
 //            make.leading.equalTo(topAnimeEpisodeCounts.snp.trailing).offset(50)
             make.trailing.equalToSuperview().inset(5)
 //            make.top.equalToSuperview()
@@ -128,3 +189,5 @@ private extension HomeTableViewCell{
     }
     
 }
+
+

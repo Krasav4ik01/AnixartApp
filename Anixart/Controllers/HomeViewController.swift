@@ -9,18 +9,20 @@ import UIKit
 import SnapKit
 class HomeViewController: UIViewController {
     
+    private var animeManager = AnimeManager()
+    
     lazy var navigationView: UICollectionView = {
-        
 
-            let layout = UICollectionViewFlowLayout()
-            layout.scrollDirection = .horizontal
-            layout.itemSize = CGSize (width: 125, height: 200)
-            let collectionView = UICollectionView(frame: .zero, collectionViewLayout : layout)
-            collectionView.backgroundColor = .black
-            collectionView.register (HomeNavigationTableViewCell.self, forCellWithReuseIdentifier: Constants.Identifiers.HomeNavigationTableViewCell)
-            collectionView.showsHorizontalScrollIndicator = false
-            return collectionView
-       
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize (width: 125, height: 200)
+//        layout.itemSize.width = 125
+//        layout.itemSize.height = 300
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout : layout)
+        collectionView.backgroundColor = .black
+        collectionView.register (HomeNavigationTableViewCell.self, forCellWithReuseIdentifier: Constants.Identifiers.HomeNavigationTableViewCell)
+        collectionView.showsHorizontalScrollIndicator = false
+        return collectionView
     }()
     
     lazy var tableView: UITableView = {
@@ -33,6 +35,7 @@ class HomeViewController: UIViewController {
         return tableView
     }()
     
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,8 +50,9 @@ class HomeViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        animeManager.delegate = tableView as? any AnimeManagerDelegate
         
-        
+        animeManager.fetchRequest()
     }
     
     func setupViews(){
@@ -60,7 +64,8 @@ class HomeViewController: UIViewController {
     }
     func setupConstraints(){
         navigationView.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(140)
+//            make.top.equalTo(MainTabBarController().searchBar.snp.bottom)
+            make.top.equalToSuperview().inset(100)
             make.leading.trailing.equalToSuperview()
 //            make.top.leading.trailing.equalToSuperview()
 
