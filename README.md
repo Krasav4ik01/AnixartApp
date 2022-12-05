@@ -18,11 +18,11 @@ to install and run project:
 
 -in Podfile write that code:
 
-  target '<Your Target Name>' do
+    target '<Your Target Name>' do
 
-    pod 'SnapKit', '~> 5.0.0'
+      pod 'SnapKit', '~> 5.0.0'
 
-end
+    end
 
 then:
 
