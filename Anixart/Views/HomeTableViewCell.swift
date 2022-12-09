@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+
 class HomeTableViewCell: UITableViewCell {
     
     lazy var invisibleButton: UIButton = {
@@ -18,7 +19,8 @@ class HomeTableViewCell: UITableViewCell {
     @objc func targetPage(){
         print("Next page tupped")
         let animePage = AnimeViewController()
-        HomeViewController().navigationController?.pushViewController(animePage, animated: true)
+//        self.pushViewController(animePage, animated: true)
+        MainTabBarController().navigationController?.pushViewController(animePage, animated: true)
     }
     
     

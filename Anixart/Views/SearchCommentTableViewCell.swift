@@ -45,8 +45,8 @@ class SearchCommentTableViewCell: UITableViewCell {
     lazy var topAnimeCommentCounts: UILabel = {
        let label = UILabel()
         label.text = GenerateAnimeData().getAnimeComments().randomElement()
-        label.textColor = MainTabBarController().selectedItemColor
-        label.layer.backgroundColor = CGColor(red: 27/255, green: 27/255, blue: 27/255, alpha: 1)
+        label.textColor = MainTabBarController().commentTextColor
+        label.layer.backgroundColor = MainTabBarController().commentColor
         label.layer.cornerRadius = 6
         return label
     }()

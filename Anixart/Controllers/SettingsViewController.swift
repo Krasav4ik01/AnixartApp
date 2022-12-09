@@ -14,7 +14,7 @@ class SettingsViewController: UIViewController {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "moon.stars")
         
-        imageView.tintColor = MainTabBarController().defaultBarBarDarkColor
+        imageView.tintColor = MainTabBarController().selectedItemColor
         imageView.contentMode = .scaleAspectFit
         return imageView
         
@@ -63,7 +63,7 @@ class SettingsViewController: UIViewController {
     lazy var notificationImage: UIImageView = {
       let imageView = UIImageView()
         imageView.image = UIImage(systemName: "bell")
-        imageView.tintColor = MainTabBarController().defaultBarBarDarkColor
+        imageView.tintColor = MainTabBarController().selectedItemColor
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -97,6 +97,22 @@ class SettingsViewController: UIViewController {
         
     }
     
+    var segmentedControl: UISegmentedControl = {
+       let segmentedControl = UISegmentedControl(items: ["Темная", "Светлая"])
+        segmentedControl.backgroundColor = .white
+        segmentedControl.selectedSegmentTintColor = MainTabBarController().selectedItemColor
+        segmentedControl.selectedSegmentIndex = 0
+        segmentedControl.tintColor = UIColor(named: "otherColor")
+        segmentedControl.addTarget(self, action: #selector(segmentChanged), for: .valueChanged)
+        segmentedControl.translatesAutoresizingMaskIntoConstraints = false
+        return segmentedControl
+    }()
+    
+    
+    @objc func segmentChanged(){
+        MTUserDefaults.shared.theme = Theme(rawValue: segmentedControl.selectedSegmentIndex) ?? .dark
+        view.window?.overrideUserInterfaceStyle = MTUserDefaults.shared.theme.getUserInterfaceStyle()
+    }
 //    var tableView: UITableView = {
 //       let tableView = UITableView()
 //        tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: Constants.Identifiers.SettingsTableViewCell)
@@ -114,6 +130,8 @@ class SettingsViewController: UIViewController {
         setupViews()
         setupConstraints()
         
+        segmentedControl.selectedSegmentIndex = MTUserDefaults.shared.theme.rawValue
+        
 //        tableView.delegate = self
 //        tableView.dataSource = self
 
@@ -124,11 +142,13 @@ class SettingsViewController: UIViewController {
     func setupViews(){
         view.addSubview(darkOrLightTheme)
         view.addSubview(settings)
-        view.addSubview(darkOrLightButton)
+//        view.addSubview(darkOrLightButton)
+        view.addSubview(segmentedControl)
         
         view.addSubview(notificationImage)
         view.addSubview(notificationLabel)
         view.addSubview(notificationButton)
+//        view.addSubview(segmentedControl)
 //        view.addSubview(tableView)
     }
     func setupConstraints(){
@@ -144,7 +164,7 @@ class SettingsViewController: UIViewController {
             make.leading.equalTo(darkOrLightTheme.snp.trailing).offset(20)
         }
         
-        darkOrLightButton.snp.makeConstraints { make in
+        segmentedControl.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).inset(15)
             
 //            make.leading.equalTo(settings.snp.trailing).offset(40)
@@ -162,13 +182,17 @@ class SettingsViewController: UIViewController {
             make.leading.equalTo(notificationImage.snp.trailing).offset(20)
         }
         notificationButton.snp.makeConstraints { make in
-            make.top.equalTo(darkOrLightButton.snp.bottom).offset(20)
+            make.top.equalTo(segmentedControl.snp.bottom).offset(20)
             
 //            make.leading.equalTo(settings.snp.trailing).offset(40)
             make.trailing.equalToSuperview().inset(10)
             
         }
-        
+//        segmentedControl.snp.makeConstraints { make in
+//            make.top.equalTo(notificationButton.snp.bottom).offset(10)
+//            make.trailing.equalToSuperview().inset(10)
+//        }
+//
 //        tableView.snp.makeConstraints { make in
 //            make.top.equalTo(notificationLabel.snp.bottom).offset(50)
 //            make.leading.trailing.bottom.equalToSuperview()

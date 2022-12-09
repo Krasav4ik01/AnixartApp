@@ -20,7 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
 //        window?.rootViewController = MainTabBarController()
-        window?.rootViewController = UINavigationController(rootViewController: MainTabBarController()) 
+        window?.rootViewController = UINavigationController(rootViewController: MainTabBarController())
+        window?.overrideUserInterfaceStyle = MTUserDefaults.shared.theme.getUserInterfaceStyle()
         window?.makeKeyAndVisible()
         
 //        let navContr = UINavigationController(rootViewController: ViewController())

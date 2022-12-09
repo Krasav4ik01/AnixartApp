@@ -30,6 +30,7 @@
 		0AEB621E2943566A00424E94 /* AnimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB621D2943566A00424E94 /* AnimeViewController.swift */; };
 		0AEB622029435AB400424E94 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB621F29435AB400424E94 /* NotificationViewController.swift */; };
 		0AEB622229435BF400424E94 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB622129435BF400424E94 /* NotificationTableViewCell.swift */; };
+		0AEB622429438B2F00424E94 /* MTUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB622329438B2F00424E94 /* MTUserDefaults.swift */; };
 		0AF4DC7929290401003AF3B1 /* AnimeLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4DC7829290401003AF3B1 /* AnimeLists.swift */; };
 		E092B4ED0CA9812617AE09D5 /* Pods_Anixart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8572B379645C68EF59D1CFFD /* Pods_Anixart.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		0AEB621D2943566A00424E94 /* AnimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeViewController.swift; sourceTree = "<group>"; };
 		0AEB621F29435AB400424E94 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		0AEB622129435BF400424E94 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		0AEB622329438B2F00424E94 /* MTUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTUserDefaults.swift; sourceTree = "<group>"; };
 		0AF4DC7829290401003AF3B1 /* AnimeLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeLists.swift; sourceTree = "<group>"; };
 		33C3498B4405042671FEB83A /* Pods-Anixart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anixart.debug.xcconfig"; path = "Target Support Files/Pods-Anixart/Pods-Anixart.debug.xcconfig"; sourceTree = "<group>"; };
 		8572B379645C68EF59D1CFFD /* Pods_Anixart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Anixart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +166,7 @@
 				0ABB140A291BE903006E07D7 /* Assets.xcassets */,
 				0ABB140C291BE903006E07D7 /* LaunchScreen.storyboard */,
 				0ABB140F291BE903006E07D7 /* Info.plist */,
+				0AEB622329438B2F00424E94 /* MTUserDefaults.swift */,
 			);
 			path = Anixart;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			files = (
 				0A9139AD291E758F0028E51A /* BookmarksViewController.swift in Sources */,
 				0AEB621E2943566A00424E94 /* AnimeViewController.swift in Sources */,
+				0AEB622429438B2F00424E94 /* MTUserDefaults.swift in Sources */,
 				0A0DAA8A293DB58E00A229E3 /* ExtensionsForNavigationBar.swift in Sources */,
 				0A9139AB291E75590028E51A /* SearchViewController.swift in Sources */,
 				0A0DAA8E293DD3C500A229E3 /* AnimeData.swift in Sources */,

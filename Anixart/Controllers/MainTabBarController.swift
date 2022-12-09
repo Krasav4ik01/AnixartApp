@@ -7,17 +7,32 @@
 
 import UIKit
 import SnapKit
+
+enum Theme: Int{
+    case dark
+    case light
+    
+    func getUserInterfaceStyle() -> UIUserInterfaceStyle{
+        switch self {
+        case .dark:
+            return .dark
+        case .light:
+            return .light
+        }
+    }
+}
+
 final class MainTabBarController: UITabBarController {
     
     lazy public var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = "  Поиск аниме"
-        searchBar.barTintColor = UIColor.black
-        searchBar.contentMode = .scaleAspectFill
+        searchBar.barTintColor = dark
+        searchBar.contentMode = .scaleAspectFit
         searchBar.layer.cornerRadius = 30
         searchBar.tintColor = .systemBackground
         searchBar.sizeToFit()
-        searchBar.layer.borderWidth = 1
+//        searchBar.layer.borderWidth = 1
         return searchBar
     }()
     var filteredAnime = [AnimeLists]()
@@ -27,12 +42,19 @@ final class MainTabBarController: UITabBarController {
         return navBar
     }()
     
-    public var dark = UIColor.black
-    public var light = UIColor.white
-    public let defaultItemColor = UIColor(red: 107/255, green: 107/255, blue: 107/255, alpha: 1)
-    public let selectedItemColor = UIColor(red: 201/255, green: 201/255, blue: 201/255, alpha: 1)
-    public let defaultBarBarDarkColor = UIColor(red: 37/255, green: 37/255, blue: 37/255, alpha: 1)
-    public let defaultDarkTheme = UIColor(red: 43/255, green: 43/255, blue: 46/255, alpha: 1)
+//    public var dark = UIColor.black
+    public var dark = UIColor(named: "background")
+    public var light = UIColor(named: "background")
+    public let defaultItemColor = UIColor(named: "defaultItemColor")
+    public let selectedItemColor = UIColor(named: "textColor")
+//    public let defaultBarBarDarkColor = UIColor(red: 37/255, green: 37/255, blue: 37/255, alpha: 1)
+//    public let defaultDarkTheme = UIColor(red: 43/255, green: 43/255, blue: 46/255, alpha: 1)
+    public let defaultBarBarDarkColor = UIColor(named: "barColor")
+    public let defaultDarkTheme = UIColor(named: "tableColor")
+//    public let commentColor = UIColor(named: "commentColor")
+    public let commentColor = CGColor(red: 27/255, green: 27/255, blue: 27/255, alpha: 1)
+    
+    public let commentTextColor = UIColor(named: "commentTextColor")
     
     //    lazy var searchController: UISearchController = {
     //        let results = UISearchController()
@@ -59,6 +81,11 @@ final class MainTabBarController: UITabBarController {
     //        searchBar.searchBar.delegate = self
     //        return searchBar
     //    }()
+    
+    
+    
+   
+    
     
     lazy private var settings: UIImageView = {
         let settings = UIImageView()
@@ -91,12 +118,9 @@ final class MainTabBarController: UITabBarController {
         self.tabBar.tintColor = selectedItemColor
         
         self.tabBar.backgroundColor = defaultBarBarDarkColor
-        //        navigationBar.addSubview(searchController.searchBar)
-        //        searchController.hidesNavigationBarDuringPresentation = false
         
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
-        //        self.navigationItem.searchController = searchController
         self.navigationItem.hidesSearchBarWhenScrolling = true
         
         
@@ -109,9 +133,7 @@ final class MainTabBarController: UITabBarController {
     func setupViews() {
         //        searchController.searchBar.translatesAutoresizingMaskIntoConstraints = false
         
-                view.addSubview(searchBar)
-        //        view.addSubview(settings)
-        //        view.addSubview(notification)
+        view.addSubview(searchBar)
         
         
         setViewControllers([home, search, bookmarks, profile], animated: true)
@@ -129,6 +151,7 @@ final class MainTabBarController: UITabBarController {
         
         
                 }
+        
         
         
         //        searchController.searchBar.widthAnchor.constraint(equalTo: HomeViewController().navigationView.widthAnchor, multiplier: 0.7).isActive = true
@@ -164,15 +187,14 @@ final class MainTabBarController: UITabBarController {
         profile.tabBarItem.image = UIImage(systemName: "person.circle")
         profile.title = "Профиль"
     }
-    //    navigationItem.rightBarButtonItems
     
     func setupButtons(){
         createCustomNavigationBar()
         let settingsButton = createCustomButton(imageName: "gearshape", selector: #selector(settingsButtonTapped(sender:)))
         let bellButton = createCustomButton(imageName: "bell", selector: #selector(bellButtonTapped(sender:)))
+        let themeButton = createCustomButton(imageName: "moon.stars", selector: #selector(changeTheme(sender:)))
         
-        
-        navigationItem.rightBarButtonItems = [bellButton, settingsButton]
+        navigationItem.rightBarButtonItems = [bellButton, settingsButton, themeButton]
         
         
     }
@@ -190,7 +212,9 @@ final class MainTabBarController: UITabBarController {
 //        HomeTableViewCell().animateView(sender)
     }
     
-    
+    @objc func changeTheme(sender: UIButton){
+        print("Changed Dark Theme")
+    }
     
     
     public func changeTnemeColor(){

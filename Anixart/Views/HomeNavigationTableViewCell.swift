@@ -51,7 +51,7 @@ class HomeNavigationTableViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.backgroundColor = MainTabBarController().dark
-        contentView.layer.borderWidth = 1
+//        contentView.layer.borderWidth = 1
         setupViews()
         setupConstraints()
         
