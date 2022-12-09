@@ -11,7 +11,7 @@ class SearchTableViewCell: UICollectionViewCell {
 
     lazy private var topImages: UIImageView = {
        let imageView = UIImageView()
-        imageView.image = UIImage(named: "power.png")
+        imageView.image = UIImage(named: "\(GenerateAnimeData().getAnimeImagesForComments().randomElement() ?? "chainsawman")" )
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()

@@ -19,7 +19,8 @@ class HomeTableViewCell: UITableViewCell {
     }
     lazy var animeImage: UIImageView = {
        let imageView = UIImageView()
-        imageView.image = UIImage(named: "chainsawman.jpg")
+        imageView.image = UIImage(named: "\(GenerateAnimeData().getAnimeImages().randomElement() ?? "chainsawman")" )
+//        imageView.image = UIImage(named: "chainsawman.jpg")
         imageView.contentMode = .scaleAspectFit
 //        imageView.autoSetDimensions(to: CGSize(width: 128.0, height: 128.0))
         imageView.layer.cornerRadius = 20

@@ -12,7 +12,7 @@ class SearchCommentTableViewCell: UITableViewCell {
     
     lazy var topAnimeImages: UIImageView = {
        let imageView = UIImageView()
-        imageView.image = UIImage(named: "chainsawman2.png")
+        imageView.image = UIImage(named: "\(GenerateAnimeData().getAnimeImages().randomElement() ?? "chainsawman")" )
         imageView.contentMode = .scaleAspectFit
 //        imageView.autoSetDimensions(to: CGSize(width: 128.0, height: 128.0))
         imageView.layer.cornerRadius = 20
@@ -23,28 +23,28 @@ class SearchCommentTableViewCell: UITableViewCell {
 
     lazy var topAnimeTitle: UILabel = {
        let label = UILabel()
-        label.text = "Anime Name"
+        label.text = GenerateAnimeData().getAnimeName().randomElement()
         label.textColor = MainTabBarController().selectedItemColor
         return label
     }()
     
     lazy var topAnimeEpisodeCounts: UILabel = {
        let label = UILabel()
-        label.text = "8 из 12 эп •"
+        label.text = GenerateAnimeData().getAnimeEpisodes().randomElement()
         label.textColor = MainTabBarController().selectedItemColor
         return label
     }()
     
     lazy var topAnimeRatingCounts: UILabel = {
        let label = UILabel()
-        label.text = " 4.9☆"
+        label.text = GenerateAnimeData().getAnimeRates().randomElement()
         label.textColor = MainTabBarController().selectedItemColor
         return label
     }()
     
     lazy var topAnimeCommentCounts: UILabel = {
        let label = UILabel()
-        label.text = "209 коммент. за сутки"
+        label.text = GenerateAnimeData().getAnimeComments().randomElement()
         label.textColor = MainTabBarController().selectedItemColor
         label.layer.backgroundColor = CGColor(red: 27/255, green: 27/255, blue: 27/255, alpha: 1)
         label.layer.cornerRadius = 6
