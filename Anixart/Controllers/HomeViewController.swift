@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 class HomeViewController: UIViewController {
     
-    private var animeManager = AnimeManager()
+//    private var animeManager = AnimeManager()
     
     lazy var navigationView: UICollectionView = {
 
@@ -50,9 +50,9 @@ class HomeViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        animeManager.delegate = tableView as? any AnimeManagerDelegate
-        
-        animeManager.fetchRequest()
+//        animeManager.delegate = tableView as? any AnimeManagerDelegate
+//
+//        animeManager.fetchRequest()
     }
     
     func setupViews(){

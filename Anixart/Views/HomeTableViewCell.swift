@@ -30,28 +30,28 @@ class HomeTableViewCell: UITableViewCell {
 
     lazy var animeTitle: UILabel = {
        let label = UILabel()
-        label.text = "Название аниме"
+        label.text = GenerateAnimeData().getAnimeName().randomElement()
         label.textColor = MainTabBarController().selectedItemColor
         return label
     }()
     
     lazy var animeEpisodeCounts: UILabel = {
        let label = UILabel()
-        label.text = "8 из 12 эп •"
+        label.text = GenerateAnimeData().getAnimeEpisodes().randomElement()
         label.textColor = MainTabBarController().selectedItemColor
         return label
     }()
     
     lazy var animeRatingCounts: UILabel = {
        let label = UILabel()
-        label.text = " 4.9☆"
+        label.text = GenerateAnimeData().getAnimeRates().randomElement()
         label.textColor = MainTabBarController().selectedItemColor
         return label
     }()
     
     lazy var animeDescription: UILabel = {
        let label = UILabel()
-        label.text = "Описание"
+        label.text = GenerateAnimeData().getAnimeDesc().randomElement()
         label.textColor = MainTabBarController().selectedItemColor
         label.layer.cornerRadius = 6
         return label
@@ -96,6 +96,11 @@ class HomeTableViewCell: UITableViewCell {
             
         }
     }
+    
+    
+    
+
+    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -178,6 +183,7 @@ private extension HomeTableViewCell{
         animeDescription.snp.makeConstraints { make in
             make.top.equalTo(animeEpisodeCounts.snp.bottom).offset(15)
             make.leading.equalTo(animeImage.snp.trailing).offset(20)
+            make.trailing.equalToSuperview().inset(20)
             
         }
         cellSettingsButton.snp.makeConstraints { make in

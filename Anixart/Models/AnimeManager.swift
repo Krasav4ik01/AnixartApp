@@ -20,33 +20,43 @@ struct AnimeManager {
     func fetchRequest(){
         let link = "https://kitsu.io/api/edge/anime"
         guard let URL = URL(string: link) else {return}
-        let task = URLSession.shared.dataTask(with: URL) {data, response, error in
-            if let data, error == nil{
-                    let decoder = JSONDecoder()
-                do {
-                    let decodedData = try decoder.decode(AnimeData.self, from: data)
-//                    let title = decodedData.data.titles.en
-                    let id = decodedData.id
-                    let canonicalTitle = decodedData.title
-                    let posterImage = decodedData.image
-                    let synopsis = decodedData.description
-                    let episodeCount = decodedData.episode
-//                    let allEpisodes = decodedData.anime[0].allEpisods
-                    let averageRating = decodedData.rate
-
-                    let animeModel = AnimeModel(id: id, title: canonicalTitle, desc: synopsis, episodes: episodeCount, rate: averageRating)
-                    delegate?.didUpdateAnime(self, with: animeModel)
-                }
-                catch {
-                    print(error)
-                    return
-                }
+        URLSession.shared.dataTask(with: URL) {data, response, error in
+            if let error = error{
+                //                    let decoder = JSONDecoder()
+                print(error)
+                return
             }
-            else{
-                print("Error")
+            guard let data = data else { return }
+            
+            let jsonString = String(data: data, encoding: .utf8)
+//            print(jsonString ?? "something")
+            let decoder = JSONDecoder()
+            
+            do{
+                let decodedData = try decoder.decode([AnimeData].self, from: data)
+                print(decodedData.first?.animeData.first?.canonicalTitle)
             }
-        }
-        task.resume()
+            catch{
+                print(error)
+            }
+            
+            
+//                    let decodedData = try decoder.decode(AnimeData.self, from: data)
+                    
+                    
+//                    let animeModel = AnimeModel(id: id, title: canonicalTitle, desc: synopsis, episodes: episodeCount, rate: averageRating)
+//                    delegate?.didUpdateAnime(self, with: animeModel)
+        }.resume()
+//                catch {
+//                    print(error)
+//                    return
+//                }
+//            }
+//            else{
+//                print("Error")
+//            }
+//        }
+//        task.resume()
     }
 }
 

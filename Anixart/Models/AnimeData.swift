@@ -8,18 +8,21 @@
 import Foundation
 import UIKit
 
-//struct AnimeData: Decodable {
-//    let anime: [Anime]
-//    let title: String
-//
-//}
+
 struct AnimeData: Decodable{
-    let id: Int
-    let title: String
-    let description: String
-    let episode: Int
-//    let allEpisods: Int
-    let rate: Double
-    let image: String
+    let animeData: [Anime]
 }
 
+struct Anime: Decodable{
+    let id: Int
+    let canonicalTitle: String
+    let posterImage: AnimeImages
+    let synopsis: String
+    let episodeCount: Int
+    let averageRating: String
+    let favoritesCount: Int
+    
+}
+struct AnimeImages: Decodable {
+    let tiny: String
+}
