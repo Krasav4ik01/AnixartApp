@@ -17,6 +17,10 @@ struct Constants{
         static let HomeNavigationTableViewCell = "HomeNavigationTableViewCell"
         
         static let SearchCommentTableViewCell = "SearchCommentTableViewCell"
+        
+        
+        static let SettingsTableViewCell = "SettingsTableViewCell"
+        static let NotificationTableViewCell = "NotificationTableViewCell"
     }
     
     struct API {

@@ -24,7 +24,7 @@ class SearchViewController: UIViewController {
         return collectionView
     }()
     
-    lazy private var searchTableView: UITableView = {
+    lazy var searchTableView: UITableView = {
        let tableView = UITableView()
         tableView.register(SearchCommentTableViewCell.self, forCellReuseIdentifier: Constants.Identifiers.SearchCommentTableViewCell)
         tableView.backgroundColor = MainTabBarController().defaultDarkTheme
@@ -34,7 +34,7 @@ class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        view.backgroundColor = MainTabBarController().dark
         
         topTableView.dataSource = self
         topTableView.delegate = self

@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
 //        layout.itemSize.width = 125
 //        layout.itemSize.height = 300
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout : layout)
-        collectionView.backgroundColor = .black
+        collectionView.backgroundColor = MainTabBarController().dark
         collectionView.register (HomeNavigationTableViewCell.self, forCellWithReuseIdentifier: Constants.Identifiers.HomeNavigationTableViewCell)
         collectionView.showsHorizontalScrollIndicator = false
         return collectionView
@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: Constants.Identifiers.homeTableViewCell)
-        tableView.backgroundColor = .black
+        tableView.backgroundColor = MainTabBarController().dark
         tableView.showsVerticalScrollIndicator = false
 //                tableView.tableHeaderView = MainTabBarController().searchController.searchBar
         
@@ -40,7 +40,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .black
+//        view.backgroundColor = MainTabBarController().dark
         setupViews()
         setupConstraints()
         
@@ -50,6 +50,12 @@ class HomeViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        if SettingsViewController().darkOrLightButton.isOn == false {
+            view.backgroundColor = MainTabBarController().light
+        }
+        else{
+            view.backgroundColor = MainTabBarController().dark
+        }
 //        animeManager.delegate = tableView as? any AnimeManagerDelegate
 //
 //        animeManager.fetchRequest()

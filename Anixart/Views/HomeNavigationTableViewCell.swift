@@ -32,11 +32,12 @@ class HomeNavigationTableViewCell: UICollectionViewCell {
     lazy var navigationView: UIButton = {
         let button = UIButton()
 //        button.text = "Последнее"
-        button.setTitle(navigationItems[0], for: .normal)
+        button.setTitle(GenerateAnimeData().getAnimeNavigationTitles().randomElement(), for: .normal)
         button.tintColor = MainTabBarController().selectedItemColor
         button.setTitleColor(MainTabBarController().selectedItemColor, for: .normal)
         button.contentMode = .scaleAspectFit
         button.addTarget(self, action: #selector(nextColomn(sender:)), for: .touchUpInside)
+        
         
         
 //        button.textAlignment = .center
@@ -49,7 +50,7 @@ class HomeNavigationTableViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        contentView.backgroundColor = .black
+        contentView.backgroundColor = MainTabBarController().dark
         contentView.layer.borderWidth = 1
         setupViews()
         setupConstraints()

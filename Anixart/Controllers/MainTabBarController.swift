@@ -14,7 +14,7 @@ final class MainTabBarController: UITabBarController {
         searchBar.placeholder = "  Поиск аниме"
         searchBar.barTintColor = UIColor.black
         searchBar.contentMode = .scaleAspectFill
-        searchBar.layer.cornerRadius = 25
+        searchBar.layer.cornerRadius = 30
         searchBar.tintColor = .systemBackground
         searchBar.sizeToFit()
         searchBar.layer.borderWidth = 1
@@ -26,6 +26,9 @@ final class MainTabBarController: UITabBarController {
         let navBar = UIView()
         return navBar
     }()
+    
+    public var dark = UIColor.black
+    public var light = UIColor.white
     public let defaultItemColor = UIColor(red: 107/255, green: 107/255, blue: 107/255, alpha: 1)
     public let selectedItemColor = UIColor(red: 201/255, green: 201/255, blue: 201/255, alpha: 1)
     public let defaultBarBarDarkColor = UIColor(red: 37/255, green: 37/255, blue: 37/255, alpha: 1)
@@ -175,12 +178,32 @@ final class MainTabBarController: UITabBarController {
     }
     @objc private func settingsButtonTapped(sender: UIButton){
         print("settingsButtonTapped")
-        HomeTableViewCell().animateView(sender)
+        let settingsVC = SettingsViewController()
+        navigationController?.pushViewController(settingsVC, animated: true)
+//        HomeTableViewCell().animateView(sender)
     }
     
     @objc private func bellButtonTapped(sender: UIButton){
         print("bellButtonTapped")
-        HomeTableViewCell().animateView(sender)
+        let notificationVC = NotificationViewController()
+        navigationController?.pushViewController(notificationVC, animated: true)
+//        HomeTableViewCell().animateView(sender)
+    }
+    
+    
+    
+    
+    public func changeTnemeColor(){
+        if SettingsViewController().darkOrLightButton.isOn == false{
+            view.backgroundColor = .white
+            HomeViewController().tableView.backgroundColor = .white
+            HomeViewController().view.backgroundColor = .white
+            SearchViewController().view.backgroundColor = .white
+            SearchViewController().searchTableView.backgroundColor = .white
+            BookmarksViewController().view.backgroundColor = .white
+            ProfileViewController().view.backgroundColor = .white
+        }
+        
     }
     
     //    func filterContentForSearchText(searchText: String, scope:String = "All") {

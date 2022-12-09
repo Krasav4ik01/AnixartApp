@@ -14,9 +14,15 @@ class HomeTableViewCell: UITableViewCell {
         button.addTarget(self, action: #selector(targetPage), for: .touchUpInside)
         return button
     }()
+    
     @objc func targetPage(){
         print("Next page tupped")
+        let animePage = AnimeViewController()
+        HomeViewController().navigationController?.pushViewController(animePage, animated: true)
     }
+    
+    
+    
     lazy var animeImage: UIImageView = {
        let imageView = UIImageView()
         imageView.image = UIImage(named: "\(GenerateAnimeData().getAnimeImages().randomElement() ?? "chainsawman")" )

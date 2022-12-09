@@ -16,7 +16,7 @@ class BookmarksViewController: UIViewController {
         super.viewDidLoad()
 
         
-        view.backgroundColor = .black
+        view.backgroundColor = MainTabBarController().dark
 
         
     }

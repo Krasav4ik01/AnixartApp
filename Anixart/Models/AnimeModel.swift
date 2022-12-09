@@ -60,7 +60,7 @@ struct GenerateAnimeData{
         return desc
     }
     public func getAnimeImages() -> [String]{
-        let image:[String] = ["chainsawman","akame","job_less","attack_on_titan","naruto","spyXfamily","full_metal","my_hero","dxd","isekai"]
+        let image:[String] = ["chainsawman2","akame","job_less","attack_on_titan","naruto","spyXfamily","full_metal","my_hero","dxd","isekai"]
         return image
     }
     public func getAnimeComments() -> [String]{
@@ -73,5 +73,19 @@ struct GenerateAnimeData{
         return image
     }
     
+    public func getAnimeNavigationTitles() -> [String]{
+        let titles:[String] = ["Моя вкладка","Последнее", "Онгоинги", "Анонсы", "Завершенное", "Фильмы"]
+        return titles
+    }
+    
+    public func getAnimeDates() -> [String]{
+        let date:[String] = ["6 дек. в 21:00","5 янв. в 18:00", "1 апр. в 13:50", "4 окт. в 15:45", "13 фев. в 05:21", "25 мар. в 14:15","18 окт. в 15:35", "10 фев. в 20:00", "15 мар. в 23:00"]
+        return date
+    }
+    
+    public func getAnimeEpisodeCounts() -> [String]{
+        let eps:[String] = ["6","5", "1", "4", "13", "25","18", "10", "150","12", "20","8", "9", "2"]
+        return eps
+    }
 }
 
