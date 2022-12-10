@@ -192,9 +192,9 @@ final class MainTabBarController: UITabBarController {
         createCustomNavigationBar()
         let settingsButton = createCustomButton(imageName: "gearshape", selector: #selector(settingsButtonTapped(sender:)))
         let bellButton = createCustomButton(imageName: "bell", selector: #selector(bellButtonTapped(sender:)))
-        let themeButton = createCustomButton(imageName: "moon.stars", selector: #selector(changeTheme(sender:)))
+//        let themeButton = createCustomButton(imageName: "moon.stars", selector: #selector(changeTheme(sender:)))
         
-        navigationItem.rightBarButtonItems = [bellButton, settingsButton, themeButton]
+        navigationItem.rightBarButtonItems = [bellButton, settingsButton]
         
         
     }
